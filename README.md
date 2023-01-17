@@ -1,6 +1,6 @@
 # Frontend Mentor - Bookmark landing page
 
-![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Bookmark landing page coding challenge](https://github.com/Eileenpk/Bookmark-Landing-Page/images/desktop-preview.jpg)
 
 ## Table of contents
 
@@ -50,13 +50,13 @@ Users should be able to:
 ![screen shot of mobile webpage]()
 ### Links
 
-- Solution URL: [GitHub]()
-- Live Site URL: [live site]()
+- Solution URL: [GitHub](https://github.com/Eileenpk/Bookmark-Landing-Page)
+- Live Site URL: [live site](https://eileenpk.github.io/Bookmark-Landing-Page/)
 
 ### Built with
  
 - [Semantic HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) - HTML5 with clear and descriptive tags for better accessibility and search engine optimization
-- [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - A utility-first CSS framework
 - Mobile-first workflow
 - [Vanilla JavaScript](https://js.org/) - JavaScript
 
