@@ -1,4 +1,5 @@
 // import data from './data/features-data'
+
 // add class function - will be reused.
 const addClass = (element, classToAdd) => {
   if (!element.classList.contains(classToAdd)) {
