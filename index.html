@@ -17,18 +17,30 @@
   </head>
   <body>
     <header>
-      <nav id="header--nav">
+      <div class="header--logo-container" id="header--logo-container">
+        <img src="/images/logo-bookmark.svg" alt="bookmark logo" class="header--img_logo"/>
+      </div>
+      <button role="button" id="nav-btn_open" class="nav--btn_open">
+        <img src="/images/icon-hamburger.svg" alt="open navigation button" id="open-nav"/>
+      </button>
+      <nav id="header--nav" class="hide">
         <div class="header--logo-container" id="header--logo-container">
-        </div>
-        <button role="button" id="nav-btn" class="nav--btn">
-          <img src="/images/icon-hamburger.svg" alt="open navigation button" id="open-nav"/>
+          <img src="/images/logo-light.png" alt="bookmark logo" class="header--img_logo"/>
+        
+        <button role="button" id="nav-btn_close" class="nav--btn_close">
+          <img src="/images/icon-close.svg" alt="close navigation button" id="close-nav"/>
         </button>
-        <ul id="nav--items" class="hide">
+      </div>
+        <ul id="nav--items">
           <li><a class="nav--anchor">Features</a></li>
           <li><a class="nav--anchor">Pricing</a></li>
           <li><a class="nav--anchor">Contact</a></li>
           <li><a class="nav--anchor">Login</a></li>
         </ul>
+        <div class="header--social-icons">
+          <a href="#"><img src="/images/icon-facebook.svg" alt="facebook social icon" ></a>
+          <a href="#"><img src="/images/icon-twitter.svg" alt="twitter social icon" /></a>
+        </div>
       </nav>
     
       <section class="header--info-container">
