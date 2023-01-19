@@ -23,7 +23,6 @@ navBtn.addEventListener('click', () => {
     const navItems = document.getElementById('nav--items')
     const logo = document.getElementById('header--logo-container')
     if(navItems.classList.contains('hide')) {
-        console.log(navItems)
         removeClass(navItems, 'hide')
         addClass(navItems,'show')
         navBtn.innerHTML = `<img src="/images/icon-close.svg" alt="close navigation button" id="close-nav"/>`
