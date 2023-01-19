@@ -254,9 +254,6 @@ header {
     background-repeat: no-repeat;
 }
 
-/* .header--logo-container {
-    width: fit-content;
-} */
 .nav--btn_open,
 .nav--btn_close {
     border: none;
@@ -266,12 +263,19 @@ header {
     margin-left: auto;
 }
 
-.show {
-    display: unset;
+/* nav transition */
+header nav {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
 }
-
-.hide {
-    display: none; 
+  
+nav.show {
+    display: unset;
+    transform: translateY(0);
+}
+  
+nav.hide {
+    transform: translateY(-100%);
 }
 
 header nav {
