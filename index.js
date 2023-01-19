@@ -18,23 +18,16 @@ const removeClass = (element, classToRemove) => {
 
 // onclick to hide nav for mobile- change nav-btn innerHTMl to show the close nav btn / toggle it. add class hide when close btn is clicked
 const navItems = document.getElementById("header--nav");
-const logo = document.getElementById("header--logo-container");
 const navBtnOpen = document.getElementById("nav-btn_open");
 navBtnOpen.addEventListener("click", () => {
-  if (navItems.classList.contains("hide")) {
     removeClass(navItems, "hide");
     addClass(navItems, "show");
-  } else return;
 });
 
 const navBtnClose = document.getElementById("nav-btn_close");
 navBtnClose.addEventListener("click", () => {
-    
-  if (navItems.classList.contains("show")) {
     removeClass(navItems, "show");
     addClass(navItems, "hide");
-    
-  }
 });
 // array of objs- Simple Bookmarking, Speedy Searching, and Easy Sharing info
 
