@@ -475,6 +475,11 @@ nav ul li:last-child {
 }
 
 /* FAQ section */
+.faq-container {
+    max-width: 540px;
+    margin-bottom: 123px;
+}
+
 .faq-container h2 {
     line-height: 30px;
     margin-bottom: 16px;
@@ -484,6 +489,11 @@ nav ul li:last-child {
     margin-bottom: 64px;
 } 
 
+.faq--drop-down-container{
+    width: 100%;
+    margin-bottom: 48px;
+}
+
 summary {
     font-size: 15px;
     list-style: none;
@@ -491,16 +501,20 @@ summary {
     align-items: center;
     justify-content: space-between;
     height: 44px;
-    width: 311px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+details {
+    width: 100%;
+}
+
+details[open] {
     border-bottom: 1px solid var(--border-color);
 }
 
 details[open] summary {
     border-bottom: none;
-}
-
-details {
-    width: 311px;
 }
 
 details .arrow {
@@ -520,7 +534,6 @@ details {
   }
   
   details summary {
-    cursor: pointer;
     transition: margin 1000ms ease-out;
   }
   
@@ -537,9 +550,7 @@ details[open] summary ~ * {
     100%  {opacity: 1; transform: translateX(0)}
   }
 
-  .faq--drop-down-container{
-    margin-bottom: 48px;
-  }
+
 
 /* start @media */
 @media(min-width: 700px) {
@@ -654,7 +665,7 @@ details[open] summary ~ * {
     .features--container p {
         grid-area: description;
         max-width: 540px;
-        /* margin: 0 auto 72px; */
+        margin: 0 auto 72px;
     }
 
     .features--container h2 + p{
@@ -749,10 +760,26 @@ details[open] summary ~ * {
         align-self: flex-end;
     }
 /* FAQ section */
+
+.faq-container {
+    margin-bottom: 149px;
+}
+
+/* footer */
+
+
 }
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
+    .nav--btn_open:hover,
+    .nav--btn_close:hover,
+    a:hover,
+    button:hover,
+    summary:hover,
+    summary:hover .arrow {
+        cursor: pointer;
+    }
  .nav--btn_open:hover,
  .nav--btn_close:hover {
     background-color: var(--third-color);
@@ -787,5 +814,12 @@ details[open] summary ~ * {
     border: none;
     border-bottom: 1px solid #DBDFF5;
     color: var(--third-color);
+ }
+
+ summary:hover {
+    color: var(--third-color);
+ }
+ summary:hover .arrow {
+    background: url(./images/icon-arrow-orange.svg) no-repeat;
  }
 }
