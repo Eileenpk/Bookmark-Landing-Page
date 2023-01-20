@@ -11,6 +11,7 @@
   --font-color:#9194A2;
   --heading-color: #242A45;
   --font-family: 'Rubik', sans-serif;
+  --border-color: #DFE0E4;
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -473,6 +474,73 @@ nav ul li:last-child {
 
 }
 
+/* FAQ section */
+.faq-container h2 {
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+.faq-container h2 + p {
+    margin-bottom: 64px;
+} 
+
+summary {
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    width: 311px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+details[open] summary {
+    border-bottom: none;
+}
+
+details {
+    width: 311px;
+}
+
+details .arrow {
+    width: 20px;
+    height: 10px;
+    background: url(./images/icon-arrow.svg) no-repeat;
+}
+details[open] .arrow {
+    transform: rotate(180deg);
+    transition: 500ms;
+    background: url(./images/icon-arrow-orange.svg) no-repeat;
+}
+
+/* transition and animation for dropdown menu */
+details {
+    padding: 10px;
+  }
+  
+  details summary {
+    cursor: pointer;
+    transition: margin 1000ms ease-out;
+  }
+  
+  details[open] summary {
+    margin-bottom: 10px;
+  }
+
+details[open] summary ~ * {
+    animation: sweep 1s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; transform: translateX(-10px)}
+    100%  {opacity: 1; transform: translateX(0)}
+  }
+
+  .faq--drop-down-container{
+    margin-bottom: 48px;
+  }
+
 /* start @media */
 @media(min-width: 700px) {
     /* General styles */
@@ -680,7 +748,7 @@ nav ul li:last-child {
     .download--extension-container:last-of-type {
         align-self: flex-end;
     }
-
+/* FAQ section */
 }
 
 /* Enable hover only on non-touch devices */
