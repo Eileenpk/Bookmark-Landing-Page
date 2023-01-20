@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="/index.js" defer></script>
+    <script src="/index.js" type="module" defer></script>
     <title>Bookmark landing page</title>
   </head>
   <body>
@@ -106,14 +106,14 @@
             Easy Sharing
           </button>
         </div>
-        <div class="features--img-container">
+        <div class="features--img-container" id="img-container">
           <img
             src="./images/illustration-features-tab-1.svg"
             alt="dark themed illustrated computer screen"
             class="features--img"
           />
         </div>
-        <div class="features--text-container">
+        <div class="features--text-container" id="text-container">
           <h3>Bookmark in one click</h3>
           <p>
             Organize your bookmarks however you like. Our simple drag-and-drop
