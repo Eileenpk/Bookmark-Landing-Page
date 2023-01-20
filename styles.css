@@ -200,6 +200,12 @@ a footer {
         letter-spacing: 0px;
         text-align: left;
     }
+
+    .features--container h2 + p,
+    .download--container h2 + p,
+    .faq-container h2 + p {
+        text-align: center;
+    }
     .faq--question p {
         font-size: 16px;
         font-weight: 400;
@@ -234,6 +240,9 @@ main {
 
 section {
     width: 83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -382,8 +391,20 @@ nav ul li:last-child {
 }
 
 /* Features */
-.features--container p {
+.features--container {
+    margin-bottom: 72px;
+}
+
+.features--container h3 {
+    margin-top:16px;
+}
+
+.features--container h2 + p{
     margin-bottom: 40px;
+}
+
+.features--container h3 + p{
+    margin-bottom: 15px;
 }
 
 .features--button-container {
@@ -396,33 +417,51 @@ nav ul li:last-child {
 
 .features--button {
     all:unset;
-    width: 100%;
+    width: 311px;
     padding: 20px 0 20px 0;
     text-align: center;
     border-bottom: 1px solid #DBDFF5;
 }
 
-
-
 .selected-tab {
-    position: relative;
+    text-decoration: underline;
+    text-decoration-color: var(--third-color);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 22px;
 }
 
-.selected-tab:after {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50% - (143px / 2));
-    content: '';
-    width: 143px;
-    height: 4px;
-    background: var(--third-color);
-}
+.features--img-container{
+    width: 100vw;
+    height: 238px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./images/features-background-mobile.png) no-repeat left bottom;
+} 
 
 .features--img {
     width: 311px;
 }
+
+.features--text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 /* start @media */
 @media(min-width: 700px) {
+    /* General styles */
+    main {
+        background: url(./images/features-background.png) no-repeat left 420px;
+        max-width: 100vw;
+    }
+
+    section {
+        width: 100vw;
+    }
+
     /* Header */   
     
     header {
@@ -508,44 +547,89 @@ nav ul li:last-child {
     }
 
     /* Features */
+
+    .features--container {
+        display: grid;
+        grid-template-areas: 
+        'header header'
+        'description description'
+        'tabs tabs'
+        'img text';
+    }
+    .features--container h2 {
+        grid-area: header;
+    }
+
     .features--container p {
+        grid-area: description;
         max-width: 540px;
-        margin: 0 auto 72px;
+        /* margin: 0 auto 72px; */
+    }
+
+    .features--container h2 + p{
+        margin-bottom: 72px;
+    }
+    
+    .features--container h3 + p{
+        margin-bottom: 32px;
     }
 
     .features--button-container {
+        grid-area: tabs;
         border-top: none;
-        max-width: 730px;
+        width: 730px;
         flex-direction: row;
+        justify-content: space-around;
         margin: 0 auto 72px auto;
         border-bottom: 1px solid #DBDFF5;
     }
 
     .features--button {
         all:unset;
-        width: 100%;
+        width: 243px;
         text-align: center;
         border-bottom: none;
         padding-bottom: 27px;
     }
 
-    .selected-tab:after {
-        position: absolute;
-        bottom: -36px;
-        left: calc(26.5% - (243px / 2));
-        content: '';
-        width: 243px;
-        height: 4px;
-        background: var(--third-color);
+    .selected-tab {
+        text-decoration: underline;
+        text-decoration-color: var(--third-color);
+        text-decoration-thickness: 4px;
+        text-underline-offset: 30px;
+        
     }
-    /* .features--underline .selected-tab {
-        width: 243px;
-        margin-top: 27px;
-    } */
+    .features--img-container{
+        grid-area: img;
+        width: 705px;
+        height: 435px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+    } 
 
     .features--img {
         width: 536px;
+        align-self: flex-end;
     }
+
+    .features--text-container {
+        grid-area: text;
+        max-width: 445px;
+        margin-bottom: 0px;
+        margin-top: -110px;
+    }
+
+    .features--text-container h3 {
+        margin-right: auto;
+    }
+
+    .features--text-container p + button {
+        margin-right: auto;
+        width: 114px;
+    }
+
 }
 
 /* Enable hover only on non-touch devices */
