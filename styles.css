@@ -70,15 +70,16 @@ p, h1, h2, h3, h4, h5, h6 {
  
 @media (prefers-color-scheme: dark) {
   :root {
-    
+    --font-color:#F7F7F7;
+    --heading-color: #7d8ed8;
   }
 }
  
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-} */
+}
  
 /* Typography  */
 body {
@@ -717,6 +718,10 @@ footer li:first-of-type {
         margin-right: 44px;
     }
 
+    nav ul li:last-child {
+        border: none;
+    }
+
     nav ul li:last-child .nav--anchor{
         border:none;
         border-radius: 5px;
@@ -934,18 +939,13 @@ footer form input {
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
-    .nav--btn_open:hover,
-    .nav--btn_close:hover,
+    i:hover,
     a:hover,
     button:hover,
     summary:hover,
     summary:hover .arrow {
         cursor: pointer;
     }
- .nav--btn_open:hover,
- .nav--btn_close:hover {
-    background-color: var(--third-color);
- }
 
  a:hover {
     color: var(--third-color);
@@ -963,6 +963,12 @@ footer form input {
     background: var(--main-color);
     border: 2px solid var(--second-color);
     color: var(--second-color);
+ }
+
+ .nav--btn_open:hover,
+ .nav--btn_close:hover {
+    background: transparent;
+    border: none;
  }
 
  .button_light:hover {
