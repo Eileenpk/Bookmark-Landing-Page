@@ -554,7 +554,103 @@ details[open] summary ~ * {
     100%  {opacity: 1; transform: translateX(0)}
   }
 
+  /* footer styles */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--heading-color);
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.footer--form-container h2,
+.footer--form-container p,
+form {
+    max-width: 442px;
+}
+
+.footer--form-container h2{
+    margin-bottom: 32px;
+}
+.footer--form-container {
+    height: 360px;
+    padding-top: 58px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--second-color);
+}
+
+footer form input {
+    width: 83%;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    text-indent: 20px;
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+footer form button {
+    background: var(--third-color);
+    width: 83%;
+    max-width: 311px;
+}
+
+/* footer nav styles */
+
+footer nav,
+footer nav li,
+footer nav ul li:last-child,
+footer li:first-of-type {
+    all: unset;
+}
+
+.footer--nav {
+    display: block;
+    height: 334px;
+}
+.footer--nav ul {
+    margin-bottom: 0;
+}
+
+.footer--links a {
+    color: var(--main-color);
+    font-size: 15px;
+    letter-spacing: 1.73px;
+}
+
+/* Footer Nav styles */
+
+.footer--nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer--nav {
+   padding-top: 40px; 
+}
+
+.footer--nav img {
+    margin-bottom: 39px;
+}
+
+.footer--nav ul {
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.footer--social-links_container img:first-of-type {
+    margin-right: 40px;
+}
 
 /* start @media */
 @media(min-width: 700px) {
@@ -769,7 +865,35 @@ details[open] summary ~ * {
     margin-bottom: 149px;
 }
 
-/* footer */
+/* footer styles*/
+.footer--form-container {
+    height: 360px;
+}
+.footer--form-container p{
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.footer--form-container h2 {
+    margin-bottom: 36px;
+}
+
+form {
+    flex-direction: row;
+}
+
+footer form button {
+    width: 126px;
+}
+footer form input {
+    margin-bottom: 0;
+    width: 300px;
+    margin-right: 16px;
+}
+/* Footer Nav styles */
+.footer--nav {
+    padding-top: 32px; 
+ }
 
 
 }
@@ -797,12 +921,6 @@ details[open] summary ~ * {
     background-color: var(--third-color);
  }
 
- nav ul li:last-child .nav--anchor:hover {
-    background-color: var(--main-color);
-    color: var(--third-color);
-    border: 2px solid var(--third-color);
- }
-
  button:hover {
     background: var(--main-color);
     border: 2px solid var(--second-color);
@@ -826,4 +944,14 @@ details[open] summary ~ * {
  summary:hover .arrow {
     background: url(./images/icon-arrow-orange.svg) no-repeat;
  }
+ @media (min-width: 700px) {
+    nav ul li:last-child .nav--anchor:hover {
+        background-color: var(--main-color);
+        color: var(--third-color);
+        border: 2px solid var(--third-color);
+     }
+ }
+
 }
+
+

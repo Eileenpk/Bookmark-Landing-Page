@@ -131,28 +131,28 @@
           you've got a favorite you'd like us to prioritize.
         </p>
         <div class="download--extensions-wrapper">
-        <div class="download--extension-container">
-          <img src="./images/logo-chrome.svg" alt="Google chrome logo"/>
-          <h3>Add to Chrome</h3>
-          <p>Minimum version 62</p>
-          <img src="./images/bg-dots.svg" alt="dots going across the box"/>
-          <button>Add & Install Extension</button>
+          <div class="download--extension-container">
+            <img src="./images/logo-chrome.svg" alt="Google chrome logo" />
+            <h3>Add to Chrome</h3>
+            <p>Minimum version 62</p>
+            <img src="./images/bg-dots.svg" alt="dots going across the box" />
+            <button>Add & Install Extension</button>
+          </div>
+          <div class="download--extension-container">
+            <img src="./images/logo-firefox.svg" alt="firefox logo" />
+            <h3>Add to Firefox</h3>
+            <p>Minimum version 55</p>
+            <img src="./images/bg-dots.svg" alt="dots going across the box" />
+            <button>Add & Install Extension</button>
+          </div>
+          <div class="download--extension-container">
+            <img src="./images/logo-opera.svg" alt="opera logo" />
+            <h3>Add to Opera Minimum</h3>
+            <p>Minimum version 46</p>
+            <img src="./images/bg-dots.svg" alt="dots going across the box" />
+            <button>Add & Install Extension</button>
+          </div>
         </div>
-        <div class="download--extension-container">
-          <img src="./images/logo-firefox.svg" alt="firefox logo"/>
-          <h3>Add to Firefox</h3>
-          <p>Minimum version 55</p>
-          <img src="./images/bg-dots.svg" alt="dots going across the box"/>
-          <button>Add & Install Extension</button>
-        </div>
-        <div class="download--extension-container">
-          <img src="./images/logo-opera.svg" alt="opera logo"/>
-          <h3>Add to Opera Minimum</h3>
-          <p>Minimum version 46</p>
-          <img src="./images/bg-dots.svg" alt="dots going across the box"/>
-          <button>Add & Install Extension</button>
-        </div>
-      </div>
       </section>
       <!-- FAQ -->
       <section class="faq-container">
@@ -164,7 +164,14 @@
         <div class="faq--drop-down-container">
           <!-- Question 1 -->
           <details class="faq--question">
-            <summary>What is Bookmark?<div role="button" class="arrow"></div></summary>
+            <summary class="transition">
+              What is Bookmark?
+              <div
+                role="button"
+                aria-label="open or close dropdown menu"
+                class="arrow"
+              ></div>
+            </summary>
             <p class="faq--answer">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
@@ -173,7 +180,14 @@
           </details>
           <!-- Question 2 -->
           <details class="faq--question">
-            <summary>How can I request a new browser?<div role="button" class="arrow"></div></summary>
+            <summary class="transition">
+              How can I request a new browser?
+              <div
+                role="button"
+                aria-label="open or close dropdown menu"
+                class="arrow"
+              ></div>
+            </summary>
             <p class="faq--answer">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
@@ -185,7 +199,14 @@
           </details>
           <!-- Question 3 -->
           <details class="faq--question">
-            <summary>Is there a mobile app? <div role="button" class="arrow"></div></summary>
+            <summary class="transition">
+              Is there a mobile app?
+              <div
+                role="button"
+                aria-label="open or close dropdown menu"
+                class="arrow"
+              ></div>
+            </summary>
             <p class="faq--answer">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
@@ -195,7 +216,14 @@
           </details>
           <!-- Question 4 -->
           <details class="faq--question">
-            <summary>What about other Chromium browsers? <div role="button" class="arrow"></div></summary>
+            <summary class="transition">
+              What about other Chromium browsers?
+              <div
+                role="button"
+                aria-label="open or close dropdown menu"
+                class="arrow"
+              ></div>
+            </summary>
             <p class="faq--answer">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
@@ -207,27 +235,34 @@
       </section>
     </main>
     <footer>
-      <p>More Info 35,000+ already joined</p>
-      <h2>Stay up-to-date with what we're doing</h2>
-      <form>
-        <input
-          aria-label="Email"
-          type="email"
-          id="email"
-          placeholder="Enter your email address"
-        />
-        <button>Contact Us</button>
-      </form>
+      <div class="footer--form-container">
+        <div class="footer--form_info_text">
+          <p>35,000+ already joined</p>
+          <h2>Stay up-to-date with what we're doing</h2>
+        </div>
+
+        <form>
+          <input
+            aria-label="Email"
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+          <button>Contact Us</button>
+        </form>
+      </div>
+      <nav class="footer--nav">
+        <img src="./images/logo-footer.png" alt="bookmark logo" />
+        <ul class="footer--links">
+          <li><a href="/features">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="footer--social-links_container">
+          <img src="./images/icon-facebook.svg" alt="facebook icon" />
+          <img src="./images/icon-twitter.svg" alt="twitter icon" />
+        </div>
+      </nav>
     </footer>
-    <nav>
-      <img src="./images/logo-bookmark.svg" alt="bookmark logo" />
-      <ul>
-        <li><a href="/features">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <img src="./images/icon-facebook.svg" alt="facebook icon" />
-      <img src="./images/icon-twitter.svg" alt="twitter icon" />
-    </nav>
   </body>
 </html>

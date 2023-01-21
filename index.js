@@ -9,10 +9,10 @@ const addClass = (element, classToAdd) => {
 };
 // remove class function - will be reused.
 const removeClass = (element, classToRemove) => {
-  if (element.classList.contains(classToRemove)) {
-    element.classList.remove(classToRemove);
+  if (!element.classList.contains(classToRemove)) {
+    return
   } else {
-    return;
+    element.classList.remove(classToRemove);
   }
 };
 
@@ -64,6 +64,5 @@ featuresButton.forEach((btn, index) => {
     addClass(btn, 'selected-tab')
   })
 })
-// onclick - remove class show dropdown and rotate arrow from all other dropdown elements. add class show dropdown, and add class rotate arrow, to clicked dropdown element.
 
 // form validation for contact us with email
