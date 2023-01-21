@@ -43,11 +43,11 @@ const selectedTabsMap = ((firstIndex) => {
         imgContainer.innerHTML = `<img
         src=${item.image}
         alt=${item.alt}
-        class="features--img"
+        class="features--img transition"
       />`
         textContainer.innerHTML = `
-        <h3>${item.heading}</h3>
-          <p>
+        <h3 class="transition">${item.heading}</h3>
+          <p class="transition">
            ${item.text}
           </p>
           <button>More Info</button>`

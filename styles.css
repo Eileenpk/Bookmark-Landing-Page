@@ -431,6 +431,10 @@ nav ul li:last-child {
     text-underline-offset: 22px;
 }
 
+.transition {
+    animation: sweep 1s ease-in-out;
+}
+
 .features--img-container{
     width: 100vw;
     height: 238px;
