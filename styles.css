@@ -262,6 +262,10 @@ button {
     color: var(--heading-color);
 }
 
+i {
+    color: var(--main-color);
+    font-size: 24px;
+}
 /* Header */
 
 header, nav, ul {
@@ -648,7 +652,7 @@ footer li:first-of-type {
     margin-bottom: 48px;
 }
 
-.footer--social-links_container img:first-of-type {
+.footer--social-links_container i:first-of-type {
     margin-right: 40px;
 }
 
@@ -890,11 +894,41 @@ footer form input {
     width: 300px;
     margin-right: 16px;
 }
+
+.footer--links a {
+    color: var(--main-color);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
 /* Footer Nav styles */
 .footer--nav {
-    padding-top: 32px; 
+    height: 88px;
+    width: 100%;
+    flex-direction: row;
+    padding: 0;
  }
 
+ .footer--nav img {
+    margin-bottom: 0px;
+ }
+.footer--nav  img:first-of-type {
+    margin-left: 165px;
+    margin-right: 36px;
+}
+
+.footer--nav ul {
+    height: fit-content;
+    width: 269px;
+    margin-bottom: 0px;
+}
+
+.footer--social-links_container{
+    margin-right: 165px;
+    margin-left: auto;
+}
+.footer--social-links_container img:first-of-type {
+    margin-right: 40px;
+}
 
 }
 
@@ -919,6 +953,10 @@ footer form input {
 
  a img:hover {
     background-color: var(--third-color);
+ }
+
+ i:hover {
+    color: var(--third-color);
  }
 
  button:hover {
