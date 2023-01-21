@@ -1,4 +1,3 @@
-
 // add class function - will be reused.
 const addClass = (element, classToAdd) => {
   if (!element.classList.contains(classToAdd)) {
@@ -10,7 +9,7 @@ const addClass = (element, classToAdd) => {
 // remove class function - will be reused.
 const removeClass = (element, classToRemove) => {
   if (!element.classList.contains(classToRemove)) {
-    return
+    return;
   } else {
     element.classList.remove(classToRemove);
   }
@@ -20,49 +19,70 @@ const removeClass = (element, classToRemove) => {
 const navItems = document.getElementById("header--nav");
 const navBtnOpen = document.getElementById("nav-btn_open");
 navBtnOpen.addEventListener("click", () => {
-    removeClass(navItems, "hide");
-    addClass(navItems, "show");
+  removeClass(navItems, "hide");
+  addClass(navItems, "show");
 });
 
 const navBtnClose = document.getElementById("nav-btn_close");
 navBtnClose.addEventListener("click", () => {
-    removeClass(navItems, "show");
-    addClass(navItems, "hide");
+  removeClass(navItems, "show");
+  addClass(navItems, "hide");
 });
 // array of objs- Simple Bookmarking, Speedy Searching, and Easy Sharing info
-import data from './data/features-data.js'
+import data from "./data/features-data.js";
 
 // onclick of one of the tabs, selects correct obj, changes inner text, and adds class to underline selected and remove selected class from non selected tabs. ->
-const featuresButton = document.querySelectorAll('.features--button')
+const featuresButton = document.querySelectorAll(".features--button");
 // function to map array of obj and match selected to variable
-const selectedTabsMap = ((firstIndex) => {
-  const imgContainer = document.getElementById('img-container')
-  const textContainer = document.getElementById('text-container')
+const selectedTabsMap = (firstIndex) => {
+  const imgContainer = document.getElementById("img-container");
+  const textContainer = document.getElementById("text-container");
   const dataMap = data.map((item, index) => {
-    if(firstIndex === index){
-        imgContainer.innerHTML = `<img
+    if (firstIndex === index) {
+      imgContainer.innerHTML = `<img
         src=${item.image}
         alt=${item.alt}
         class="features--img transition"
-      />`
-        textContainer.innerHTML = `
+      />`;
+      textContainer.innerHTML = `
         <h3 class="transition">${item.heading}</h3>
           <p class="transition">
            ${item.text}
           </p>
-          <button>More Info</button>`
+          <button>More Info</button>`;
     }
-  })
-  return dataMap
-})
-// onclick of tab function that runs previous  functions. 
+  });
+  return dataMap;
+};
+// onclick of tab function that runs previous  functions.
 
 featuresButton.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    featuresButton.forEach(btn => removeClass(btn, 'selected-tab'))
-    selectedTabsMap(index)
-    addClass(btn, 'selected-tab')
-  })
-})
+  btn.addEventListener("click", () => {
+    featuresButton.forEach((btn) => removeClass(btn, "selected-tab"));
+    selectedTabsMap(index);
+    addClass(btn, "selected-tab");
+  });
+});
 
 // form validation for contact us with email
+
+const formBtn = document.getElementById("form--button");
+formBtn.addEventListener("click", (event) => {
+  const emailInput = document.getElementById("email");
+  const emailRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  event.preventDefault();
+  const errorMessage = document.getElementById("error-message");
+  if (emailInput.value === "" || !emailRegex.test(emailInput.value)) {
+    addClass(errorMessage, 'error-message')
+    errorMessage.innerHTML = `
+    <img src="./images/icon-error.svg" class="error--icon" />
+    <p>Whoops, make sure it's an email</p>
+    `;
+  } else {
+    removeClass(errorMessage, 'error-message')
+    errorMessage.innerHTML = ""
+    alert('Thanks for getting in touch with us!')
+    emailInput.value = ""
+  }
+});

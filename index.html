@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/a8c22f49c5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a8c22f49c5.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="icon"
       type="image/png"
@@ -28,8 +31,11 @@
         />
       </div>
       <button role="button" id="nav-btn_open" class="nav--btn_open">
-        <i class="fa-solid fa-bars" alt="open navigation button"
-        id="open-nav"></i>
+        <i
+          class="fa-solid fa-bars"
+          alt="open navigation button"
+          id="open-nav"
+        ></i>
       </button>
       <nav id="header--nav" class="hide">
         <div class="header--logo-container" id="header--logo-container">
@@ -40,8 +46,11 @@
           />
 
           <button role="button" id="nav-btn_close" class="nav--btn_close">
-            <i class="fa-solid fa-xmark" alt="close navigation button"
-            id="close-nav"></i>
+            <i
+              class="fa-solid fa-xmark"
+              alt="close navigation button"
+              id="close-nav"
+            ></i>
           </button>
         </div>
         <ul id="nav--items">
@@ -51,10 +60,8 @@
           <li><a class="nav--anchor">Login</a></li>
         </ul>
         <div class="header--social-icons">
-          <a href="#"
-            ><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="#"
-            ><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
       </nav>
 
@@ -233,14 +240,19 @@
           <h2>Stay up-to-date with what we're doing</h2>
         </div>
 
-        <form>
+        <form type="submit">
           <input
+            autocomplete="off"
+            required
             aria-label="Email"
-            type="email"
+            type="text"
             id="email"
             placeholder="Enter your email address"
           />
-          <button>Contact Us</button>
+
+          <div id="error-message" role="alert">
+          </div>
+          <button id="form--button">Contact Us</button>
         </form>
       </div>
       <nav class="footer--nav">

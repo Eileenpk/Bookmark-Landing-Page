@@ -573,6 +573,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    /* position: relative; */
 }
 .footer--form-container h2,
 .footer--form-container p,
@@ -608,6 +609,38 @@ footer form button {
     max-width: 311px;
 }
 
+/* Form error message styles */
+
+form:has(.error-message) input {
+    border: 2px solid var(--third-color);
+}
+.error--icon {
+    transform:translate(265px, -30px);
+}
+
+.error-message {
+    position: relative;
+    background-color: var(--third-color);
+    height: 26px;
+    width: 83%;
+    max-width: 300px;
+    top: -20px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.error-message p {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.25px;
+    text-align: left; 
+    margin-top: -20px;
+    margin-left: 12px;  
+}
 /* footer nav styles */
 
 footer nav,
@@ -905,6 +938,21 @@ footer form input {
     font-size: 13px;
     letter-spacing: 1.5px;
 }
+
+/* Form error message styles */
+form:has(.error-message) {
+    flex-wrap: wrap;
+}
+
+form:has(.error-message) #form--button {
+    order: 1;
+}
+
+.error-message {
+    order: 2;
+    top: -4px;
+}
+
 /* Footer Nav styles */
 .footer--nav {
     height: 88px;
