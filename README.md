@@ -13,6 +13,7 @@
 
 ## Overview
 This project is built with Vanilla JS (ES6), CSS, and HTML5. 
+
 The HTML has:
 - details and summery tags for dropdown menu
 
@@ -51,7 +52,7 @@ Users should be able to:
   - The input field is empty
   - The email address is not formatted correctly
 
-### Screenshot
+### Screenshots
 
 ![screen shot of full screen webpage](https://github.com/Eileenpk/Bookmark-Landing-Page/blob/main/images/desktop.png)
 ![screen shot of mobile webpage](https://github.com/Eileenpk/Bookmark-Landing-Page/blob/main/images/mobile.png)
