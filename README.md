@@ -13,11 +13,22 @@
 
 ## Overview
 This project is built with Vanilla JS (ES6), CSS, and HTML5. 
-The JavaScript will consist of:
+The HTML has:
+- details and summery tags for dropdown menu
+
+The CSS has: 
+- Normalize library
+- BEM convention 
+- Prefers light or dark mode
+- variables
+- All typography in one section (after reset but before general styles)
+- Mobile first development
+
+The JavaScript has:
 - onclick to hide / show nav for mobile
 - add class function - will be reused.
-- remove call function - will be reused.
-- array of objects:
+- remove class function - will be reused.
+- array of objects sourced from data.js:
     - Simple Bookmarking 
     - Speedy Searching
     - Easy Sharing info
@@ -27,10 +38,6 @@ The JavaScript will consist of:
     - change inner text
     - add class to underline selected
     - remove selected class from non selected tabs.
-
-- onclick on one of the dropdown items will:
-    - remove class show dropdown and remove rotate arrow from all other dropdown elements. 
-    - add class show dropdown, and add class rotate arrow, to clicked dropdown element.
 
 - form validation for contact us with email
 
@@ -46,8 +53,8 @@ Users should be able to:
 
 ### Screenshot
 
-![screen shot of full screen webpage]()
-![screen shot of mobile webpage]()
+![screen shot of full screen webpage](https://github.com/Eileenpk/Bookmark-Landing-Page/blob/main/images/desktop.png)
+![screen shot of mobile webpage](https://github.com/Eileenpk/Bookmark-Landing-Page/blob/main/images/mobile.png)
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Eileenpk/Bookmark-Landing-Page)
