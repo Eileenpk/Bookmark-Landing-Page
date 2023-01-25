@@ -184,6 +184,14 @@ a footer {
         text-align: center;
     }
 
+    .download--extension-container h3 {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        text-align: center;
+
+    }
+
     footer h2 {
         line-height: 40px;
     }
@@ -209,6 +217,12 @@ a footer {
     .faq-container h2 + p {
         text-align: center;
     }
+
+    .download--extension-container p {
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: 0px;
+    }
     .faq--question p {
         font-size: 16px;
         font-weight: 400;
@@ -233,7 +247,12 @@ a footer {
 /* general styles */
 body {
     position: relative;
+    background-image: url(./images/header-background-mobile.png),url(./images/features-background-mobile.png);
+    background-position: right 197px, left 1338px;
+    background-repeat: no-repeat, no-repeat ;
+    
 }
+
 body,
 main {
     display: flex;
@@ -285,8 +304,8 @@ header {
     padding: 0 8.5vw ;
     justify-content: center;
     margin-top: 40px;
-    background-image: url(./images/header-background-mobile.png);
-    background-position: 100px 132px;
+    /* background-image: url(./images/header-background-mobile.png);
+    background-position: 100px 132px; */
     background-repeat: no-repeat;
 }
 
@@ -383,7 +402,11 @@ nav ul li:last-child {
     margin-top: 80px;
 }
 .header--text-container {
-    margin-bottom: 140px;
+    margin-bottom: 100px;
+}
+
+.header--text-container h1 {
+    margin-top: 64px;
 }
 .header--text-container p{
     margin-bottom: 32px;
@@ -448,15 +471,16 @@ nav ul li:last-child {
 .features--img-container{
     width: 100vw;
     height: 238px;
+    
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(./images/features-background-mobile.png) no-repeat left bottom;
 } 
 
 .features--img {
     width: 311px;
+    margin-top: -29px;
 }
 
 .features--text-container {
@@ -698,9 +722,12 @@ footer li:first-of-type {
 /* start @media */
 @media(min-width: 700px) {
     /* General styles */
-    main {
-        background: url(./images/features-background.png) no-repeat left 420px;
-        max-width: 100vw;
+
+    body {
+        position: relative;
+        background: url(./images/header-background.png),url(./images/features-background.png);
+        background-position:  right 336px, left 1196px;
+        background-repeat: no-repeat, no-repeat;
     }
 
     section {
@@ -714,10 +741,7 @@ footer li:first-of-type {
         justify-content: flex-start;
         max-width: 100vw;
         height: 688px;
-        padding: 0 91px 180px 165px;
-        background: url(./images/header-background.png);
-        background-position:  right 255px;
-        background-repeat: no-repeat;
+        padding: 16px 91px 180px 171px;
     }
 
     header .header--logo-container {
@@ -748,7 +772,7 @@ footer li:first-of-type {
 
 /* Header nav styles */
     #header--nav {
-        margin-right: 165px;
+        margin-right: 65px;
         width: fit-content;
     }
 
@@ -758,6 +782,10 @@ footer li:first-of-type {
 
     nav ul li:last-child {
         border: none;
+    }
+
+    .nav--anchor {
+        text-transform: uppercase;
     }
 
     nav ul li:last-child .nav--anchor{
@@ -773,7 +801,7 @@ footer li:first-of-type {
     .header--info-container{
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 108px;
+        margin-top: 122px;
     }
 
     .header--text-container {
@@ -784,11 +812,15 @@ footer li:first-of-type {
     .header--img-container {
         margin-top: -30px;
         margin-right: 152px;
-        width: 466px;
+        width: 50vw;
+        max-width: 466px;
         order: 1;
         opacity: 91%;
     }
-    
+    .header--img-container img{
+        width: 50vw;
+        max-width: 657px;
+    }
     .header--img {
         width:657px;
         height:466px;
@@ -804,9 +836,12 @@ footer li:first-of-type {
         'description description'
         'tabs tabs'
         'img text';
+        margin-top: 40px;
+        margin-bottom: 115px;
     }
     .features--container h2 {
         grid-area: header;
+        margin-bottom: 15px;
     }
 
     .features--container p {
@@ -850,7 +885,8 @@ footer li:first-of-type {
     }
     .features--img-container{
         grid-area: img;
-        width: 705px;
+        width: 50vw;
+        max-width: 705px;
         height: 435px;
         display: flex;
         flex-direction: column;
@@ -859,19 +895,24 @@ footer li:first-of-type {
     } 
 
     .features--img {
-        width: 536px;
+        min-width: 80%;
+        max-width: 536px;
         align-self: flex-end;
+        margin-top: 0px;
     }
 
     .features--text-container {
         grid-area: text;
         max-width: 445px;
+        height: fit-content;
         margin-bottom: 0px;
-        margin-top: -110px;
+        margin-top: -150px;
+        margin-right: 40px;
     }
 
     .features--text-container h3 {
         margin-right: auto;
+        margin-bottom: 15px;
     }
 
     .features--text-container p + button {
@@ -880,11 +921,11 @@ footer li:first-of-type {
     }
 
     /* Download section */
-    .download--container {
-        margin-bottom: 149px;
+    .download--container h2 {
+        margin-bottom: 18px;
     }
     .download--container h2 + p {
-        margin-bottom: 48px;
+        margin-bottom: 68px;
     }
 
     .download--extensions-wrapper {
@@ -898,6 +939,7 @@ footer li:first-of-type {
         margin-right: 34px;
     }
 
+ 
     .download--extension-container:nth-of-type(2) {
         align-self: center;
         margin-right: 34px;
@@ -906,6 +948,7 @@ footer li:first-of-type {
     .download--extension-container:last-of-type {
         align-self: flex-end;
     }
+
 /* FAQ section */
 
 .faq-container {
